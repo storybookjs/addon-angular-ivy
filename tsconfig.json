@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,
@@ -16,6 +16,7 @@
       "dom"
     ]
   },
+  "include": ["src/**/*"],
   "angularCompilerOptions": {
   }
 }
