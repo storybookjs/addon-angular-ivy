@@ -1,17 +1,17 @@
 {
-  "name": "storybook-addon-kit",
+  "name": "storybook-addon-angular-ivy",
   "version": "0.0.0",
-  "description": "everything you need to build a Storybook addon",
+  "description": "This addon enables Ivy for @storybook/angular and is meant as a preview before it gets integrated into @storybook/angular itself.",
   "keywords": [
     "storybook-addons",
-    "style",
-    "test"
+    "angular",
+    "ivy"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybookjs/storybook-addon-kit"
+    "url": "https://github.com/storybookjs/addon-angular-ivy"
   },
-  "author": "winkerVSbecks",
+  "author": "Kai Roeder",
   "license": "MIT",
   "main": "dist/index.js",
   "files": [
@@ -77,12 +77,10 @@
     "access": "public"
   },
   "storybook": {
-    "displayName": "Addon Kit",
+    "displayName": "Addon Angular Ivy",
     "supportedFrameworks": [
-      "react",
-      "vue",
       "angular"
     ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+    "icon": "https://angular.io/generated/images/marketing/concept-icons/compiler.png"
   }
 }
