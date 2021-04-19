@@ -28,7 +28,7 @@ export const webpack = (
       mainFields: [
         "es2015_ivy_ngcc",
         "module_ivy_ngcc",
-        "main__ivy_ngcc",
+        "main_ivy_ngcc",
         "es2015",
         "browser",
         "module",
