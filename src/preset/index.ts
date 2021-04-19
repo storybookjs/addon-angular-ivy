@@ -1,6 +1,6 @@
 import { Configuration } from "webpack";
 import { process as ngccProcess } from "@angular/compiler-cli/ngcc";
-import path from "path";
+import * as path from "path";
 
 /**
  * Run ngcc for converting modules to ivy format before starting storybook
@@ -14,13 +14,10 @@ ngccProcess({
   async: false,
   basePath: path.join(process.cwd(), "node_modules"), // absolute path to node_modules
   createNewEntryPointFormats: true, // --create-ivy-entry-points
-  compileAllFormats: false // --first-only
+  compileAllFormats: false, // --first-only
 });
 
-export const webpack = (
-  webpackConfig: Configuration,
-  _ = {}
-) => {
+export const webpack = (webpackConfig: Configuration, _ = {}) => {
   return {
     ...webpackConfig,
     resolve: {
@@ -32,8 +29,8 @@ export const webpack = (
         "es2015",
         "browser",
         "module",
-        "main"
-      ]
-    }
+        "main",
+      ],
+    },
   };
 };
