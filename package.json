@@ -1,6 +1,6 @@
 {
   "name": "storybook-addon-angular-ivy",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This addon enables Ivy for @storybook/angular and is meant as a preview before it gets integrated into @storybook/angular itself.",
   "keywords": [
     "storybook-addons",
