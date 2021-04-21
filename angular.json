@@ -11,7 +11,7 @@
           "options": {
             "tsConfig": "tsconfig.json",
             "aot": false,
-            "styles": [],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         }
