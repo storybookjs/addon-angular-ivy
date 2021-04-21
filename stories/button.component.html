@@ -1,6 +1,6 @@
 <section>
-  <div class="example-label">Basic</div>
-  <div class="example-button-row">
+  <div class="example-label">{{ basicLabel }} <button (click)="toggle()">Toggle</button></div>
+  <div class="example-button-row" *ngIf="isVisible$ | async">
     <button mat-button>Basic</button>
     <button mat-button color="primary">Primary</button>
     <button mat-button color="accent">Accent</button>
