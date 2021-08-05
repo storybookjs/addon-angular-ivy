@@ -1,0 +1,32 @@
+// @import 'mixins';
+
+.edit-card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-height: 50px;
+
+  &__edit-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 200;
+
+    .skeleton {
+      // @include skeleton();
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__body {
+    flex: 1 1 auto;
+
+    .skeleton {
+      // @include skeleton();
+
+      min-height: 50px;
+    }
+  }
+}

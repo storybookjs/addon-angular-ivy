@@ -1,0 +1,41 @@
+<mat-card *ngIf="!skeleton; else skeletonTpl" class="edit-card">
+  <button
+    *ngIf="!hideEditButton"
+    mat-icon-button
+    color="accent"
+    type="button"
+    class="edit-card__edit-button"
+    (click)="toggleEditionMode()"
+  >
+    <span [class]="!readonly ? 'bridge-icon-clearclose' : 'bridge-icon-edit'"></span>
+  </button>
+
+  <div class="edit-card__body">
+    <ng-content></ng-content>
+    <div *ngIf="readonly" class="edit-card__body__readonly">
+      <ng-content select="lf-edit-card-readonly"></ng-content>
+      <ng-template [cdkPortalOutlet]="readonlyPortal"></ng-template>
+    </div>
+
+    <div *ngIf="!readonly" class="edit-card__body__edition">
+      <ng-content select="lf-edit-card-edition"></ng-content>
+      <ng-template [cdkPortalOutlet]="editionPortal"></ng-template>
+    </div>
+  </div>
+</mat-card>
+
+<ng-template #skeletonTpl>
+  <mat-card class="edit-card skeleton">
+    <button mat-icon-button color="accent" class="edit-card__edit-button" [disabled]="true">
+      <div class="skeleton"></div>
+    </button>
+    <div class="edit-card__body">
+      <ng-container
+        *ngIf="skeletonContentTpl; else defaultSkeltonContent"
+        [ngTemplateOutlet]="skeletonContentTpl"
+      ></ng-container>
+    </div>
+  </mat-card>
+</ng-template>
+
+<ng-template #defaultSkeltonContent><div class="skeleton"></div></ng-template>
