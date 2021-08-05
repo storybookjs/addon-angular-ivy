@@ -1,3 +1,5 @@
+> Storybook has integrated Ivy support since v6.3 and this addon is no longer needed.
+
 # Storybook Addon Angular Ivy
 
 This addon configures [Storybook for Angular](https://storybook.js.org/docs/angular/get-started/introduction) to use the new [Angular Ivy renderer](https://angular.io/guide/ivy) instead of the ViewEngine that Storybook uses by default.
